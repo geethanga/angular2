@@ -32,7 +32,7 @@ import {Task} from '../models/Task';
       }
 
       initializeTasks(){
-        this.tasks = this.taskService.getTasks();
+        this.taskService.getTasks().then(tasks => this.tasks = tasks);
       }
     } 
 
